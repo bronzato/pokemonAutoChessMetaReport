@@ -48,16 +48,16 @@ simplefilter(action='ignore', category=FutureWarning)
 
 
 # load json data
-request_pokemons = requests.get('https://pokemon-auto-chess.com/pokemons')
+request_pokemons = requests.get('https://pokechess.com.br/pokemons')
 LIST_POKEMON = [p for p in request_pokemons.json().values()]
 
-types_pokemons = requests.get('https://pokemon-auto-chess.com/types')
+types_pokemons = requests.get('https://pokechess.com.br/types')
 TYPE_POKEMON = types_pokemons.json()
 
-trigger = requests.get('https://pokemon-auto-chess.com/types-trigger')
+trigger = requests.get('https://pokechess.com.br/types-trigger')
 TYPE_TRIGGER = trigger.json()
 
-items = requests.get('https://pokemon-auto-chess.com/items')
+items = requests.get('https://pokechess.com.br/items')
 ITEM = items.json()
 
 # get list of type for each pokemon
